@@ -1,0 +1,19 @@
+{
+  "name": "PVOptimizer Add-on",
+  "slug": "pvotimizer",
+  "version": "0.1",
+  "description": "Dodatek do optymalizacji systemu PV z integracją falowników Deye i baterii JK-BMS.",
+  "startup": "services",
+  "boot": "auto",
+  "host_network": true,
+  "options": {
+    "subscription_active": false,
+    "deye_host": "192.168.x.x",
+    "jk_bms_port": "/dev/ttyUSB0"
+  },
+  "schema": {
+    "subscription_active": "bool",
+    "deye_host": "str",
+    "jk_bms_port": "str"
+  }
+}
