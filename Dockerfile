@@ -1,19 +1,17 @@
 FROM python:3.9-slim
 
-# Ustaw katalog roboczy
+# Ustawienie katalogu roboczego
 WORKDIR /app
 
-# Skopiuj pliki projektu
-COPY . /app
+# Kopiowanie plików aplikacji i listy zależności
+COPY app/ /app
+COPY requirements.txt /app
 
-# Instalacja zależności (np. FastAPI i inne wymagane biblioteki)
-RUN pip install --no-cache-dir fastapi uvicorn
+# Instalacja zależności
+RUN pip install --no-cache-dir -r requirements.txt
 
-# Opcjonalnie: instalacja innych zależności lub narzędzi diagnostycznych
-# RUN pip install --no-cache-dir <inne-pakiety>
-
-# Ustawienie portu (jeśli aplikacja nasłuchuje, np. na 8000)
+# Eksponowanie portu (np. 8000)
 EXPOSE 8000
 
-# Punkt wejścia – uruchomienie aplikacji FastAPI przez uvicorn
+# Uruchomienie aplikacji przez uvicorn
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
