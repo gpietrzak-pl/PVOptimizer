@@ -22,5 +22,5 @@
   "panel_icon": "mdi:solar-power",
   "panel_admin": false,
   "watchdog": "[PROTO:ssl]://[HOST]:[PORT:8123]/api/health",
-  "image": "twoj_dockerhub_username/pv_optimizer:{arch}"
+  "image": "gpietrzakpl/pv_optimizer:{arch}"
 }
