@@ -1,3 +1,3 @@
 #!/bin/bash
 
-python /app/pv_optimizer/main.py
+python /app/pvoptimizer/main.py

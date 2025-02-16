@@ -1,8 +1,8 @@
 FROM python:3.9-slim-buster
 
-WORKDIR /pv_optimizer
+WORKDIR /pvoptimizer
 
-COPY pv_optimizer /pv_optimizer
+COPY pvoptimizer /pvoptimizer
 COPY run.sh /
 
 RUN apt-get update && apt-get install -y --no-install-recommends \

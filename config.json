@@ -1,7 +1,7 @@
 {
   "name": "Optymalizator PV",
   "version": "0.1.0",
-  "slug": "pv_optimizer",
+  "slug": "pvoptimizer",
   "description": "Dodatek do Home Assistant optymalizujący pracę systemu PV.",
   "arch": ["aarch64", "amd64", "armhf", "armv7"],
   "startup": "application",
@@ -15,12 +15,12 @@
   "ports": {
     "8123/tcp": 8123
   },
-  "webui": "[PROTO:ssl]://[HOST]:[PORT:8123]/pv_optimizer",
+  "webui": "[PROTO:ssl]://[HOST]:[PORT:8123]/pvoptimizer",
   "ingress": true,
   "ingress_port": 8123,
     "ingress_entry": "/pv_optimizer",
   "panel_icon": "mdi:solar-power",
   "panel_admin": false,
   "watchdog": "[PROTO:ssl]://[HOST]:[PORT:8123]/api/health",
-  "image": "gpietrzakpl/pv_optimizer:{arch}"
+  "image": "gpietrzakpl/pvoptimizer:{arch}"
 }
